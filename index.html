@@ -1,0 +1,1156 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dj女ｅｘｔｅｎｄｅｄ_女DJ加长混音版_夜店EDM混音歌单</title>
+<meta name="description" content="dj女ｅｘｔｅｎｄｅｄ聚焦女DJ加长混音版作品，收录夜店EDM长版Set、俱乐部加长Remix歌单与现场串烧清单，适合夜店DJ、派对主理人和电子乐迷深挖加长版曲目。">
+<meta name="keywords" content="女DJ长版混音, 夜店加长Set, Club Extended Mix, EDM串烧歌单, 派对BGM合集">
+<style>
+:root{
+  --bg:#0b0b12;
+  --bg-2:#12121c;
+  --panel:#171725;
+  --panel-2:#1e1e30;
+  --line:#2b2b40;
+  --line-soft:#232336;
+  --text:#ecebf5;
+  --text-2:#b3b2c7;
+  --text-3:#7d7c95;
+  --pink:#ff3d8b;
+  --pink-soft:#ff7fb0;
+  --cyan:#37e6d0;
+  --violet:#8b5cf6;
+  --amber:#ffc65c;
+  --radius:14px;
+  --radius-sm:9px;
+  --shadow:0 14px 40px rgba(0,0,0,.45);
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --notice-h:38px;
+  --head-h:64px;
+  --maxw:1340px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font);
+  background:
+    radial-gradient(1100px 600px at 12% -10%, rgba(255,61,139,.16), transparent 60%),
+    radial-gradient(900px 520px at 92% 4%, rgba(55,230,208,.10), transparent 62%),
+    radial-gradient(800px 400px at 50% 110%, rgba(139,92,246,.12), transparent 60%),
+    var(--bg);
+  color:var(--text);
+  line-height:1.7;
+  font-size:15px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.3;font-weight:700}
+p{margin:0 0 .8em}
+ul,ol{margin:0;padding-left:1.15em}
+li{margin:.25em 0}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
+section[id],div[id]{scroll-margin-top:calc(var(--notice-h) + var(--head-h) + 14px)}
+
+/* ==== 吸顶公告条 ==== */
+.notice{
+  position:sticky;top:0;z-index:60;
+  height:var(--notice-h);
+  display:flex;align-items:center;
+  background:linear-gradient(90deg,#ff3d8b,#8b5cf6 55%,#37e6d0);
+  color:#100a18;
+  font-size:13px;font-weight:600;
+}
+.notice .wrap{
+  width:100%;max-width:var(--maxw);margin:0 auto;padding:0 18px;
+  display:flex;align-items:center;gap:12px;overflow:hidden;
+}
+.notice .tag{
+  flex:none;background:#100a18;color:#ffe3ef;
+  padding:2px 9px;border-radius:999px;font-size:11px;letter-spacing:.06em;
+}
+.notice .marquee{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.notice .marquee b{font-weight:800}
+.notice a{text-decoration:underline;text-underline-offset:3px}
+
+/* ==== 页头 ==== */
+.head{
+  position:sticky;top:var(--notice-h);z-index:55;
+  background:rgba(11,11,18,.88);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+  height:var(--head-h);
+}
+.head .wrap{
+  max-width:var(--maxw);margin:0 auto;padding:0 18px;height:100%;
+  display:flex;align-items:center;gap:22px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand-mark{
+  width:38px;height:38px;flex:none;border-radius:11px;
+  background:linear-gradient(140deg,#ff3d8b,#8b5cf6 60%,#37e6d0);
+  display:grid;place-items:center;box-shadow:0 6px 18px rgba(255,61,139,.35);
+}
+.brand-name{
+  font-size:18px;font-weight:800;letter-spacing:.01em;
+  background:linear-gradient(90deg,#fff,#ffb3d0);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  white-space:nowrap;
+}
+.nav{display:flex;align-items:center;gap:4px;flex:1;min-width:0;overflow:hidden}
+.nav a{
+  font-size:13.5px;color:var(--text-2);padding:7px 11px;border-radius:8px;white-space:nowrap;
+  transition:.18s;
+}
+.nav a:hover{color:#fff;background:var(--panel-2)}
+.head-actions{display:flex;align-items:center;gap:10px;flex:none}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  border:1px solid var(--line);background:var(--panel-2);color:var(--text);
+  font:inherit;font-size:13px;font-weight:600;padding:8px 15px;border-radius:999px;
+  cursor:pointer;transition:.18s;white-space:nowrap;
+}
+.btn:hover{border-color:var(--pink);color:#fff;background:#241a2c}
+.btn-primary{
+  background:linear-gradient(100deg,#ff3d8b,#8b5cf6);border-color:transparent;color:#fff;
+  box-shadow:0 6px 18px rgba(255,61,139,.3);
+}
+.btn-primary:hover{filter:brightness(1.08);background:linear-gradient(100deg,#ff3d8b,#8b5cf6)}
+.menu-btn{display:none}
+
+/* ==== 首屏 ==== */
+.hero{
+  max-width:var(--maxw);margin:0 auto;padding:46px 18px 40px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;letter-spacing:.16em;color:var(--cyan);
+  border:1px solid rgba(55,230,208,.35);background:rgba(55,230,208,.07);
+  padding:5px 12px;border-radius:999px;margin-bottom:18px;
+}
+.hero-eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan);display:block}
+.hero h1{
+  font-size:clamp(30px,4.6vw,52px);letter-spacing:-.01em;
+  background:linear-gradient(96deg,#fff 12%,#ffb3d0 48%,#8be9de 92%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  margin-bottom:16px;word-break:break-word;
+}
+.hero .lede{color:var(--text-2);font-size:16px;max-width:52ch;margin-bottom:22px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:22px;margin-bottom:26px}
+.hero-meta div{min-width:88px}
+.hero-meta b{display:block;font-size:22px;color:#fff;letter-spacing:.01em}
+.hero-meta span{font-size:12px;color:var(--text-3);letter-spacing:.06em}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-visual{position:relative;min-height:340px}
+.vinyl{
+  position:relative;width:100%;aspect-ratio:1/1;max-width:400px;margin-left:auto;
+  border-radius:50%;
+  background:radial-gradient(circle at 50% 50%,#2a2a3d 0 18%,#141420 19% 26%,#0d0d15 27% 100%);
+  box-shadow:0 0 0 1px #31314a, 0 30px 70px rgba(0,0,0,.6), inset 0 0 60px rgba(139,92,246,.18);
+  display:grid;place-items:center;
+  animation:spin 26s linear infinite;
+}
+.vinyl::before{
+  content:"";position:absolute;inset:8%;border-radius:50%;
+  background:repeating-radial-gradient(circle at 50% 50%, rgba(255,255,255,.05) 0 1px, transparent 1px 5px);
+}
+.vinyl-core{
+  width:34%;aspect-ratio:1/1;border-radius:50%;
+  background:linear-gradient(140deg,#ff3d8b,#8b5cf6 60%,#37e6d0);
+  display:grid;place-items:center;position:relative;z-index:2;
+  box-shadow:0 0 30px rgba(255,61,139,.45);
+}
+.vinyl-core span{font-size:11px;font-weight:800;letter-spacing:.14em;color:#12081a;text-align:center;line-height:1.25}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.vinyl{animation:none}}
+.hero-eq{
+  position:absolute;left:-6px;bottom:8px;display:flex;align-items:flex-end;gap:4px;height:64px;
+  filter:drop-shadow(0 4px 12px rgba(55,230,208,.4));
+}
+.hero-eq i{display:block;width:7px;border-radius:3px;background:linear-gradient(180deg,#37e6d0,#ff3d8b);animation:eq 1.1s ease-in-out infinite}
+.hero-eq i:nth-child(1){height:26%;animation-delay:0s}
+.hero-eq i:nth-child(2){height:58%;animation-delay:.12s}
+.hero-eq i:nth-child(3){height:92%;animation-delay:.24s}
+.hero-eq i:nth-child(4){height:44%;animation-delay:.36s}
+.hero-eq i:nth-child(5){height:74%;animation-delay:.48s}
+.hero-eq i:nth-child(6){height:34%;animation-delay:.6s}
+.hero-eq i:nth-child(7){height:64%;animation-delay:.72s}
+@keyframes eq{0%,100%{transform:scaleY(.5)}50%{transform:scaleY(1)}}
+@media (prefers-reduced-motion:reduce){.hero-eq i{animation:none}}
+
+/* ==== 主体三栏 ==== */
+.shell{
+  max-width:var(--maxw);margin:0 auto;padding:0 18px 70px;
+  display:grid;grid-template-columns:178px minmax(0,1fr) 256px;gap:26px;
+  align-items:start;
+}
+.channel{
+  position:sticky;top:calc(var(--notice-h) + var(--head-h) + 16px);
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 12px;
+}
+.channel h2{
+  font-size:11px;letter-spacing:.16em;color:var(--text-3);
+  padding:0 8px 10px;border-bottom:1px solid var(--line-soft);margin-bottom:8px;
+}
+.channel ul{list-style:none;padding:0;margin:0}
+.channel a{
+  display:flex;align-items:center;justify-content:space-between;gap:6px;
+  padding:8px 9px;border-radius:8px;font-size:13.5px;color:var(--text-2);transition:.16s;
+}
+.channel a:hover{background:var(--panel-2);color:#fff}
+.channel a em{font-style:normal;font-size:11px;color:var(--text-3);font-variant-numeric:tabular-nums}
+.channel a:hover em{color:var(--pink-soft)}
+
+.main{min-width:0;display:flex;flex-direction:column;gap:26px}
+.side{display:flex;flex-direction:column;gap:22px;position:sticky;top:calc(var(--notice-h) + var(--head-h) + 16px)}
+
+.card-panel{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;
+}
+.panel-head{
+  display:flex;align-items:baseline;justify-content:space-between;gap:14px;
+  margin-bottom:16px;flex-wrap:wrap;
+}
+.panel-head h2{font-size:19px;letter-spacing:.01em}
+.panel-head h2 small{font-size:11px;color:var(--text-3);letter-spacing:.14em;margin-left:8px;font-weight:600}
+.panel-head .more{font-size:12.5px;color:var(--pink-soft)}
+.panel-head .more:hover{text-decoration:underline}
+.lead{color:var(--text-2);font-size:14.5px}
+
+/* 概览 */
+.overview p{color:var(--text-2);font-size:14.6px}
+.overview strong{color:#fff}
+
+/* 精选卡片 */
+.grid-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.mix-card{
+  background:var(--panel-2);border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+  overflow:hidden;display:flex;flex-direction:column;transition:.18s;
+}
+.mix-card:hover{border-color:rgba(255,61,139,.55);transform:translateY(-3px);box-shadow:var(--shadow)}
+.mix-card .thumb{position:relative;aspect-ratio:4/3;overflow:hidden;background:#0c0c14}
+.mix-card img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.mix-card:hover img{transform:scale(1.05)}
+.mix-card .badge{
+  position:absolute;top:8px;left:8px;font-size:10.5px;font-weight:700;letter-spacing:.06em;
+  background:rgba(11,11,18,.82);color:var(--cyan);padding:3px 8px;border-radius:6px;
+  border:1px solid rgba(55,230,208,.3);backdrop-filter:blur(4px);
+}
+.mix-card .body{padding:12px 13px 14px;display:flex;flex-direction:column;gap:7px;flex:1}
+.mix-card h3{font-size:14.5px;line-height:1.4}
+.mix-card .desc{font-size:12.6px;color:var(--text-3);line-height:1.6;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tags span{
+  font-size:11px;color:var(--text-2);background:#101019;border:1px solid var(--line-soft);
+  padding:2px 7px;border-radius:5px;white-space:nowrap;
+}
+.meta-row{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:11.5px;color:var(--text-3);border-top:1px solid var(--line-soft);padding-top:8px}
+.meta-row b{color:var(--amber);font-weight:700}
+
+/* 最新动态 */
+.updates{list-style:none;padding:0;margin:0;display:flex;flex-direction:column}
+.updates li{
+  display:grid;grid-template-columns:74px minmax(0,1fr);gap:14px;
+  padding:11px 0;border-bottom:1px dashed var(--line-soft);
+}
+.updates li:last-child{border-bottom:0;padding-bottom:0}
+.updates time{font-size:12px;color:var(--text-3);font-variant-numeric:tabular-nums;padding-top:2px}
+.updates .u-title{font-size:14px;font-weight:600;color:#fff}
+.updates .u-title em{font-style:normal;color:var(--cyan);font-size:11.5px;margin-left:6px;border:1px solid rgba(55,230,208,.3);padding:1px 6px;border-radius:5px}
+.updates .u-desc{font-size:12.8px;color:var(--text-3);margin-top:2px}
+
+/* 分类 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.cat{
+  display:flex;flex-direction:column;gap:4px;padding:12px;border-radius:var(--radius-sm);
+  background:var(--panel-2);border:1px solid var(--line-soft);transition:.16s;
+}
+.cat:hover{border-color:var(--violet);background:#1b1b2c}
+.cat b{font-size:13.5px;color:#fff}
+.cat span{font-size:11.5px;color:var(--text-3)}
+.cat i{font-style:normal;font-size:11px;color:var(--pink-soft)}
+
+/* 深度解析 */
+.deep h3{
+  font-size:16px;margin:22px 0 9px;padding-left:11px;position:relative;color:#fff;
+}
+.deep h3::before{content:"";position:absolute;left:0;top:4px;bottom:4px;width:3px;border-radius:2px;background:linear-gradient(180deg,#ff3d8b,#37e6d0)}
+.deep h3:first-of-type{margin-top:4px}
+.deep p{color:var(--text-2);font-size:14.6px}
+.deep ul{color:var(--text-2);font-size:14.6px}
+.deep li::marker{color:var(--pink)}
+.callout{
+  border-left:3px solid var(--amber);background:rgba(255,198,92,.07);
+  padding:12px 16px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  font-size:13.6px;color:#f0e2c4;margin:14px 0;
+}
+
+/* 体验步骤 */
+.steps{counter-reset:s;display:flex;flex-direction:column;gap:12px}
+.step{
+  display:grid;grid-template-columns:38px minmax(0,1fr);gap:14px;
+  background:var(--panel-2);border:1px solid var(--line-soft);border-radius:var(--radius-sm);padding:13px 15px;
+}
+.step::before{
+  counter-increment:s;content:counter(s,decimal-leading-zero);
+  font-size:14px;font-weight:800;color:var(--pink);
+  border:1px solid rgba(255,61,139,.4);border-radius:8px;height:30px;
+  display:grid;place-items:center;align-self:start;background:rgba(255,61,139,.08);
+}
+.step b{display:block;font-size:14px;color:#fff;margin-bottom:3px}
+.step p{margin:0;font-size:13.2px;color:var(--text-3)}
+
+/* FAQ */
+details.faq{
+  border:1px solid var(--line-soft);border-radius:var(--radius-sm);background:var(--panel-2);
+  margin-bottom:9px;overflow:hidden;
+}
+details.faq summary{
+  cursor:pointer;padding:12px 16px;font-size:14px;font-weight:600;list-style:none;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";color:var(--pink);font-size:17px;font-weight:700;transition:.2s}
+details.faq[open] summary::after{transform:rotate(45deg)}
+details.faq[open] summary{color:var(--cyan)}
+details.faq .ans{padding:0 16px 14px;font-size:13.5px;color:var(--text-2);border-top:1px solid var(--line-soft);padding-top:12px;margin-top:0}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.cmt{background:var(--panel-2);border:1px solid var(--line-soft);border-radius:var(--radius-sm);padding:12px 14px}
+.cmt .who{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.avatar{
+  width:26px;height:26px;border-radius:50%;flex:none;display:grid;place-items:center;
+  font-size:11px;font-weight:800;color:#0d0d15;
+  background:linear-gradient(135deg,#37e6d0,#8b5cf6);
+}
+.cmt .who b{font-size:12.6px;color:#fff}
+.cmt .who span{font-size:11px;color:var(--text-3);margin-left:auto}
+.cmt p{margin:0;font-size:13px;color:var(--text-2);line-height:1.65}
+
+/* 资讯 */
+.news{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.news-item{
+  display:flex;gap:12px;background:var(--panel-2);border:1px solid var(--line-soft);
+  border-radius:var(--radius-sm);padding:11px;transition:.16s;
+}
+.news-item:hover{border-color:rgba(55,230,208,.45)}
+.news-item img{width:84px;height:68px;border-radius:7px;object-fit:cover;flex:none}
+.news-item .n-body{min-width:0}
+.news-item h4{font-size:13.4px;margin-bottom:4px;color:#fff;line-height:1.45}
+.news-item .date{font-size:11px;color:var(--cyan);font-variant-numeric:tabular-nums}
+.news-item p{margin:4px 0 0;font-size:12px;color:var(--text-3);line-height:1.55}
+
+/* 相关推荐 标签索引 */
+.reco-tags{display:flex;flex-wrap:wrap;gap:8px}
+.reco-tags a{
+  font-size:12.8px;padding:6px 13px;border-radius:999px;
+  background:var(--panel-2);border:1px solid var(--line-soft);color:var(--text-2);transition:.16s;
+}
+.reco-tags a:hover{border-color:var(--pink);color:#fff;background:#241a2c}
+.reco-tags a.hot{color:#ffd9e6;border-color:rgba(255,61,139,.45);background:rgba(255,61,139,.1)}
+
+/* 榜单 */
+.chart{list-style:none;padding:0;margin:0;counter-reset:c}
+.chart li{
+  counter-increment:c;display:grid;grid-template-columns:26px minmax(0,1fr) auto;gap:11px;
+  align-items:center;padding:10px 0;border-bottom:1px solid var(--line-soft);
+}
+.chart li:last-child{border-bottom:0}
+.chart li::before{
+  content:counter(c);font-size:12px;font-weight:800;color:var(--text-3);
+  text-align:center;font-variant-numeric:tabular-nums;
+}
+.chart li:nth-child(1)::before,.chart li:nth-child(2)::before,.chart li:nth-child(3)::before{color:var(--amber)}
+.chart .c-name{font-size:13.4px;color:#fff;font-weight:600;line-height:1.4}
+.chart .c-sub{font-size:11.5px;color:var(--text-3)}
+.chart .c-val{font-size:11.5px;color:var(--text-3);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* 侧栏组件 */
+.side-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.side-card h2{font-size:13px;letter-spacing:.1em;color:var(--text-2);margin-bottom:12px;display:flex;align-items:center;gap:7px}
+.side-card h2::before{content:"";width:3px;height:13px;border-radius:2px;background:var(--pink);display:block}
+.side-card .mini{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px}
+.side-card .mini li{display:flex;gap:9px;align-items:flex-start;font-size:12.8px;line-height:1.5}
+.side-card .mini .idx{
+  flex:none;width:18px;height:18px;border-radius:5px;font-size:11px;font-weight:800;
+  display:grid;place-items:center;background:#101019;color:var(--text-3);border:1px solid var(--line-soft);
+}
+.side-card .mini li:nth-child(-n+3) .idx{color:var(--amber);border-color:rgba(255,198,92,.4)}
+.side-card .mini a{color:var(--text-2)}
+.side-card .mini a:hover{color:#fff;text-decoration:underline}
+.side-card .mini small{display:block;color:var(--text-3);font-size:11px;margin-top:1px}
+.update-stream{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0}
+.update-stream li{padding:9px 0;border-bottom:1px dashed var(--line-soft);font-size:12.6px;color:var(--text-2)}
+.update-stream li:last-child{border-bottom:0;padding-bottom:0}
+.update-stream b{color:#fff;font-weight:600;display:block}
+.update-stream time{font-size:11px;color:var(--text-3)}
+.search-box{display:flex;gap:7px;margin-bottom:10px}
+.search-box input{
+  flex:1;min-width:0;background:#0e0e18;border:1px solid var(--line);color:var(--text);
+  border-radius:8px;padding:8px 11px;font:inherit;font-size:12.8px;
+}
+.search-box input::placeholder{color:var(--text-3)}
+.search-box button{
+  border:0;border-radius:8px;padding:0 13px;font:inherit;font-size:12.5px;font-weight:700;
+  background:linear-gradient(100deg,#ff3d8b,#8b5cf6);color:#fff;cursor:pointer;flex:none;
+}
+.search-result{font-size:12.3px;color:var(--text-3);min-height:18px}
+.search-result b{color:var(--cyan)}
+.search-result a{color:var(--pink-soft);text-decoration:underline;text-underline-offset:2px}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:6px}
+.tag-cloud a{font-size:11.8px;padding:4px 9px;border-radius:6px;background:#101019;border:1px solid var(--line-soft);color:var(--text-2)}
+.tag-cloud a:hover{border-color:var(--cyan);color:#fff}
+
+/* 页尾 */
+.foot{border-top:1px solid var(--line);background:#08080e;margin-top:10px}
+.foot .wrap{max-width:var(--maxw);margin:0 auto;padding:44px 18px 26px}
+.foot-top{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:30px;margin-bottom:34px}
+.foot-brand p{font-size:13px;color:var(--text-3);max-width:34ch;margin-top:12px}
+.foot-col h3{font-size:12px;letter-spacing:.12em;color:var(--text-3);margin-bottom:12px}
+.foot-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.foot-col a{font-size:13px;color:var(--text-2)}
+.foot-col a:hover{color:var(--pink-soft)}
+.foot-bottom{
+  border-top:1px solid var(--line-soft);padding-top:18px;
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
+  font-size:12px;color:var(--text-3);
+}
+.foot-bottom .disclaimer{max-width:70ch;line-height:1.7}
+
+/* ==== 响应式 ==== */
+@media (max-width:1120px){
+  .shell{grid-template-columns:160px minmax(0,1fr);}
+  .side{display:none}
+  .hero{grid-template-columns:1fr .8fr;gap:30px}
+  .grid-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:1024px){
+  .nav{display:none}
+  .menu-btn{display:inline-flex}
+  .nav.open{
+    display:flex;position:absolute;top:var(--head-h);left:12px;right:12px;
+    flex-direction:column;align-items:stretch;gap:2px;
+    background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    padding:10px;box-shadow:var(--shadow);z-index:70;max-height:60vh;overflow:auto;
+  }
+  .nav.open a{padding:10px 12px;font-size:14px}
+  .hero{grid-template-columns:1fr;padding-top:34px}
+  .hero-visual{order:-1;min-height:0;max-width:280px;margin:0 auto}
+  .hero-meta g{display:none}
+  .foot-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .shell{grid-template-columns:1fr}
+  .channel{position:static;top:auto;padding:12px}
+  .channel h2{padding-bottom:8px}
+  .channel ul{display:flex;flex-wrap:wrap;gap:6px}
+  .channel li{flex:0 1 auto}
+  .channel a{padding:6px 11px;background:var(--panel-2);border:1px solid var(--line-soft);gap:5px}
+  .channel a em{color:var(--text-3)}
+}
+@media (max-width:740px){
+  body{font-size:14.5px}
+  .notice{font-size:12px}
+  .notice .wrap{padding:0 12px;gap:8px}
+  .head .wrap{padding:0 12px;gap:10px}
+  .brand-name{font-size:15px}
+  .head-actions .btn:not(.menu-btn):not(.btn-primary){display:none}
+  .hero{padding:26px 12px 26px}
+  .hero .lede{font-size:14.6px}
+  .hero-meta{gap:16px}
+  .hero-meta b{font-size:18px}
+  .shell{padding:0 12px 50px;gap:20px}
+  .card-panel{padding:16px}
+  .grid-cards{grid-template-columns:1fr 1fr;gap:10px}
+  .mix-card h3{font-size:13.5px}
+  .mix-card .desc{font-size:11.8px}
+  .cat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .comments{grid-template-columns:1fr}
+  .news{grid-template-columns:1fr}
+  .updates li{grid-template-columns:1fr;gap:3px}
+  .updates time{font-size:11px}
+  .foot-top{grid-template-columns:1fr;gap:22px}
+  .foot .wrap{padding:32px 14px 22px}
+  .chart li{grid-template-columns:24px minmax(0,1fr);}
+  .chart .c-val{display:none}
+}
+@media (max-width:400px){
+  .grid-cards{grid-template-columns:1fr}
+  .hero-meta div{min-width:74px}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="notice" role="status">
+  <div class="wrap">
+    <span class="tag">今日更新</span>
+    <span class="marquee">11 月 25 日新增 <b>9 组女DJ加长混音</b>：<b>Kira Vale</b> 上海站 72 分钟 Extended Set 上线，<b>NOVA-9</b> 的 Deep House 长版串烧同步更新 → <a href="/#updates">查看更新清单</a></span>
+  </div>
+</div>
+
+<!-- 页头 -->
+<header class="head">
+  <div class="wrap">
+    <a class="brand" href="/#top" aria-label="dj女ｅｘｔｅｎｄｅｄ 首页">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" stroke="#12081a" stroke-width="1.8"/>
+          <circle cx="12" cy="12" r="2.6" fill="#12081a"/>
+          <path d="M12 3.2v3.4M12 17.4v3.4M3.2 12h3.4M17.4 12h3.4" stroke="#12081a" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="brand-name">dj女ｅｘｔｅｎｄｅｄ</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="主导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#featured">精选加长版</a>
+      <a href="/#updates">最新上线</a>
+      <a href="/#categories">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">收听路径</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#comments">听众评论</a>
+      <a href="/#news">相关资讯</a>
+    </nav>
+    <div class="head-actions">
+      <a class="btn" href="/#chart">本周榜单</a>
+      <a class="btn btn-primary" href="/#featured">进入歌单</a>
+      <button class="btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">菜单</button>
+    </div>
+  </div>
+</header>
+
+<!-- 首屏 -->
+<section class="hero" id="top">
+  <div>
+    <span class="hero-eyebrow"><i aria-hidden="true"></i>女DJ · 加长混音 · 夜店现场</span>
+    <h1>dj女ｅｘｔｅｎｄｅｄ</h1>
+    <p class="lede">专收女DJ的加长混音版本：60 分钟以上的 Club Extended Set、8 分钟起的 Extended Mix 单曲，以及夜店现场串烧完整录音。按风格、BPM、场景三条线索整理，方便你判断一组长版值不值得完整听完。</p>
+    <div class="hero-meta">
+      <div><b>1,286</b><span>加长混音条目</span></div>
+      <div><b>74</b><span>在录女DJ</span></div>
+      <div><b>9</b><span>今日新增</span></div>
+      <div><b>62min</b><span>平均单组时长</span></div>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="/#featured">看精选加长版</a>
+      <a class="btn" href="/#guide">第一次怎么听</a>
+    </div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <div class="vinyl">
+      <div class="vinyl-core"><span>EXTENDED<br>MIX</span></div>
+    </div>
+    <div class="hero-eq"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
+</section>
+
+<!-- 主体三栏 -->
+<div class="shell">
+
+  <!-- 左频道索引 -->
+  <aside class="channel" aria-label="频道索引">
+    <h2>频道索引</h2>
+    <ul>
+      <li><a href="/#featured">Tech House 长版 <em>218</em></a></li>
+      <li><a href="/#featured">Deep House 串烧 <em>176</em></a></li>
+      <li><a href="/#featured">Hard Techno 现场 <em>142</em></a></li>
+      <li><a href="/#featured">EDM 大场 Set <em>203</em></a></li>
+      <li><a href="/#featured">Afro House <em>97</em></a></li>
+      <li><a href="/#featured">Trance 长轨 <em>88</em></a></li>
+      <li><a href="/#featured">Hip-Hop 混编 <em>134</em></a></li>
+      <li><a href="/#featured">中文歌 Remix <em>121</em></a></li>
+      <li><a href="/#chart">本周加长榜 <em>TOP20</em></a></li>
+      <li><a href="/#news">厂牌与赛事 <em>36</em></a></li>
+    </ul>
+  </aside>
+
+  <!-- 中主内容 -->
+  <main class="main">
+
+    <!-- 1 领域概览 -->
+    <section class="card-panel overview" id="overview">
+      <div class="panel-head">
+        <h2>女DJ加长混音到底在听什么<small>OVERVIEW</small></h2>
+      </div>
+      <p><strong>dj女ｅｘｔｅｎｄｅｄ</strong>指向的不是某一位DJ，而是一类内容形态：由女性DJ完成、时长被拉长的混音作品。它通常分三种来源。第一种是<strong>Extended Mix 单曲版</strong>，把一首 3 分钟的流行或 EDM 曲目拉长到 6—9 分钟，前后各加一段鼓组铺陈和一条可接歌的尾奏，方便现场衔接。第二种是<strong>Club Set 完整录音</strong>，45—90 分钟一气呵成，中间不打断，考验的是选曲逻辑和 BPM 曲线。第三种是<strong>主题串烧</strong>，围绕一个明确线索，比如“全中文女声 Tech House”或“凌晨三点的 Hard Techno”，把 30—50 首短片段缝成一条长线。</p>
+      <p>当前值得关注的方向有四条。其一，<strong>Tech House 与 Afro House 的加长版</strong>在 2026 年下半年明显增多，很多女DJ把 124—128 BPM 的律动拉满 70 分钟，节奏稳定、适合长时间铺场。其二，<strong>Hard Techno 的快节奏长版</strong>在 150—160 BPM 区间形成独立社区，作品多为现场直录，带观众声和返送噪声。其三，<strong>中文歌 Remix 加长版</strong>成为夜店暖场的高频选择，华语女声被重新编曲进四四拍框架。其四，<strong>EDM 大场 Set</strong> 依旧占播放量头部，但听众开始更在意“有没有真接歌”，而不是单纯堆热门曲。</p>
+      <p>判断一组加长混音值不值得投入一小时，可以先看三个具体信号：<strong>有没有写清 BPM 区间</strong>、<strong>是否标注录音场景（棚录／现场）</strong>、<strong>曲目表是否公开</strong>。三项齐全的条目，通常听感与描述差距较小。</p>
+    </section>
+
+    <!-- 2 精选内容推荐 -->
+    <section class="card-panel" id="featured">
+      <div class="panel-head">
+        <h2>精选加长混音<small>FEATURED</small></h2>
+        <a class="more" href="/#chart">按热度排序 →</a>
+      </div>
+      <div class="grid-cards">
+
+        <article class="mix-card">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/djkira-shanghai72/400/300" width="400" height="300" loading="lazy" alt="Kira Vale 上海站 72 分钟 Tech House 加长混音封面">
+            <span class="badge">Tech House</span>
+          </div>
+          <div class="body">
+            <h3>Kira Vale · 上海站 72 分钟 Extended Set</h3>
+            <div class="desc">124—127 BPM 稳定推进，前 20 分钟只铺鼓与贝斯，第 34 分钟才进人声采样。适合需要长时间不中断铺场的俱乐部主时段。</div>
+            <div class="tags"><span>现场直录</span><span>BPM 124-127</span><span>曲目表公开</span></div>
+            <div class="meta-row"><span>11-25 上线</span><b>热度 9.6</b></div>
+          </div>
+        </article>
+
+        <article class="mix-card">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/novanine-deephouse/400/300" width="400" height="300" loading="lazy" alt="NOVA-9 Deep House 长版串烧封面">
+            <span class="badge">Deep House</span>
+          </div>
+          <div class="body">
+            <h3>NOVA-9 · 深夜 Deep House 长版串烧</h3>
+            <div class="desc">118 BPM 慢推，收 41 首曲目的段落式拼接，中段有一段 6 分钟无鼓铺陈，适合酒吧后段与收场过渡。</div>
+            <div class="tags"><span>棚录</span><span>41 首曲目</span><span>收场适用</span></div>
+            <div class="meta-row"><span>11-23 上线</span><b>热度 9.2</b></div>
+          </div>
+        </article>
+
+        <article class="mix-card">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/murasaki-hardtechno/400/300" width="400" height="300" loading="lazy" alt="Murasaki 硬核 Techno 现场加长版封面">
+            <span class="badge">Hard Techno</span>
+          </div>
+          <div class="body">
+            <h3>Murasaki · 柏林地下室 88 分钟 Hard Techno</h3>
+            <div class="desc">152 BPM 起步一路加到 160，前半段保留观众声，中段换盘两次有明显停顿。想要高压推进的听众可以从第 26 分钟切入。</div>
+            <div class="tags"><span>现场直录</span><span>152-160 BPM</span><span>换盘留痕</span></div>
+            <div class="meta-row"><span>11-21 上线</span><b>热度 9.4</b></div>
+          </div>
+        </article>
+
+        <article class="mix-card">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/lumi-afrohouse/400/300" width="400" height="300" loading="lazy" alt="Lumi Adeyemi Afro House 加长版封面">
+            <span class="badge">Afro House</span>
+          </div>
+          <div class="body">
+            <h3>Lumi Adeyemi · Afro House 66 分钟长版</h3>
+            <div class="desc">以手鼓与马林巴为骨架，121 BPM 上下浮动，人声采样集中在后半程。适合户外派对与日落时段，律动比强度更突出。</div>
+            <div class="tags"><span>棚录</span><span>手鼓采样</span><span>户外适用</span></div>
+            <div class="meta-row"><span>11-20 上线</span><b>热度 8.9</b></div>
+          </div>
+        </article>
+
+        <article class="mix-card">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/annlin-chineseremix/400/300" width="400" height="300" loading="lazy" alt="安琳 中文女声 Remix 加长串烧封面">
+            <span class="badge">中文 Remix</span>
+          </div>
+          <div class="body">
+            <h3>安琳 · 中文女声 Remix 加长串烧 Vol.7</h3>
+            <div class="desc">把 28 首华语女声重新编进 126 BPM 四四拍，保留原曲主歌辨识度。暖场与商场活动都能用，接歌点做得比较干净。</div>
+            <div class="tags"><span>28 首曲目</span><span>暖场适用</span><span>接歌干净</span></div>
+            <div class="meta-row"><span>11-19 上线</span><b>热度 9.1</b></div>
+          </div>
+        </article>
+
+        <article class="mix-card">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/vex-edmbigroom/400/300" width="400" height="300" loading="lazy" alt="VEX 大场 EDM 加长版 Set 封面">
+            <span class="badge">EDM</span>
+          </div>
+          <div class="body">
+            <h3>VEX · 大场 EDM 80 分钟加长版 Set</h3>
+            <div class="desc">128 BPM 主打，四次副歌叠推，明显为大舞台设计。第 48 分钟起连续三首高能曲堆叠，适合需要制造峰值的主秀时段。</div>
+            <div class="tags"><span>棚录</span><span>128 BPM</span><span>峰值堆叠</span></div>
+            <div class="meta-row"><span>11-18 上线</span><b>热度 8.7</b></div>
+          </div>
+        </article>
+
+        <article class="mix-card">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/hoshino-trance/400/300" width="400" height="300" loading="lazy" alt="Hoshino 长轨 Trance 加长版封面">
+            <span class="badge">Trance</span>
+          </div>
+          <div class="body">
+            <h3>Hoshino · 长轨 Trance 68 分钟加长版</h3>
+            <div class="desc">138 BPM 经典推进，保留长旋律铺垫与 breakdown。单曲段落平均 9 分半，适合喜欢完整旋律走向而非快速切歌的听众。</div>
+            <div class="tags"><span>棚录</span><span>138 BPM</span><span>长旋律</span></div>
+            <div class="meta-row"><span>11-16 上线</span><b>热度 8.5</b></div>
+          </div>
+        </article>
+
+        <article class="mix-card">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/jaydee-hiphopmix/400/300" width="400" height="300" loading="lazy" alt="Jay Dee 小 嘻哈混编加长版封面">
+            <span class="badge">Hip-Hop</span>
+          </div>
+          <div class="body">
+            <h3>Jay Dee 小 · Hip-Hop 混编 54 分钟长版</h3>
+            <div class="desc">以 92—104 BPM 的律动为主，间插两段 double-time 推进。曲目表按年代排列，适合想顺着时间线听风格演变的人。</div>
+            <div class="tags"><span>年代排序</span><span>92-104 BPM</span><span>曲目表公开</span></div>
+            <div class="meta-row"><span>11-14 上线</span><b>热度 8.4</b></div>
+          </div>
+        </article>
+
+        <article class="mix-card">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/sena-melodictechno/400/300" width="400" height="300" loading="lazy" alt="Sena 旋律 Techno 加长版封面">
+            <span class="badge">Melodic Techno</span>
+          </div>
+          <div class="body">
+            <h3>Sena · 旋律 Techno 75 分钟长版</h3>
+            <div class="desc">122 BPM 缓慢展开，情绪线从冷到暖再回落。第 40 分钟有一段几乎只留 pad 的空段，适合作为整晚的情绪转折点。</div>
+            <div class="tags"><span>棚录</span><span>情绪线清晰</span><span>转折适用</span></div>
+            <div class="meta-row"><span>11-12 上线</span><b>热度 8.8</b></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 3 最新更新 -->
+    <section class="card-panel" id="updates">
+      <div class="panel-head">
+        <h2>最新上线与动态<small>UPDATES</small></h2>
+      </div>
+      <ul class="updates">
+        <li>
+          <time datetime="2026-11-25">今天 10:20</time>
+          <div><div class="u-title">Kira Vale 上海站 72 分钟 Set<em>新上线</em></div><div class="u-desc">现场直录版已上传，曲目表同步公开，共 26 首。</div></div>
+        </li>
+        <li>
+          <time datetime="2026-11-25">今天 09:05</time>
+          <div><div class="u-title">NOVA-9 深夜 Deep House 串烧</div><div class="u-desc">补上第 41 首曲目信息，棚录版音轨重新母带化。</div></div>
+        </li>
+        <li>
+          <time datetime="2026-11-24">昨天 22:40</time>
+          <div><div class="u-title">Murasaki 柏林 88 分钟现场<em>更新</em></div><div class="u-desc">第 26 分钟换盘处新增时间戳标注，方便分段收听。</div></div>
+        </li>
+        <li>
+          <time datetime="2026-11-24">昨天 18:12</time>
+          <div><div class="u-title">安琳 中文女声 Remix Vol.7</div><div class="u-desc">新增 126 BPM 版本，与原有 124 BPM 版并列。</div></div>
+        </li>
+        <li>
+          <time datetime="2026-11-23">11-23 15:30</time>
+          <div><div class="u-title">VEX 大场 EDM 80 分钟 Set</div><div class="u-desc">第 48 分钟起的连续三首高能曲已单独标注。</div></div>
+        </li>
+        <li>
+          <time datetime="2026-11-22">11-22 20:00</time>
+          <div><div class="u-title">Hoshino 长轨 Trance 68 分钟</div><div class="u-desc">单曲段落平均时长更新为 9 分 30 秒。</div></div>
+        </li>
+        <li>
+          <time datetime="2026-11-21">11-21 11:16</time>
+          <div><div class="u-title">Sena 旋律 Techno 75 分钟<em>新上线</em></div><div class="u-desc">第 40 分钟空段位置已标记，可作为整晚转折点。</div></div>
+        </li>
+        <li>
+          <time datetime="2026-11-20">11-20 17:45</time>
+          <div><div class="u-title">Lumi Adeyemi Afro House 66 分钟</div><div class="u-desc">手鼓采样来源补全，新增户外场景标签。</div></div>
+        </li>
+        <li>
+          <time datetime="2026-11-19">11-19 09:38</time>
+          <div><div class="u-title">Jay Dee 小 Hip-Hop 混编 54 分钟</div><div class="u-desc">曲目表按年代重排，补充 2012—2016 段说明。</div></div>
+        </li>
+        <li>
+          <time datetime="2026-11-18">11-18 21:02</time>
+          <div><div class="u-title">本周加长榜 TOP20 更新</div><div class="u-desc">Tech House 类目首次占据前三，Hard Techno 升至第五。</div></div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 4 分类入口 -->
+    <section class="card-panel" id="categories">
+      <div class="panel-head">
+        <h2>按风格与场景分类<small>CATEGORIES</small></h2>
+      </div>
+      <div class="cat-grid">
+        <a class="cat" href="/#featured"><b>Tech House</b><span>124—128 BPM 稳定推进</span><i>218 组</i></a>
+        <a class="cat" href="/#featured"><b>Deep House</b><span>118—122 BPM 慢推铺场</span><i>176 组</i></a>
+        <a class="cat" href="/#featured"><b>Hard Techno</b><span>150—160 BPM 高压现场</span><i>142 组</i></a>
+        <a class="cat" href="/#featured"><b>EDM 大场</b><span>128 BPM 峰值堆叠</span><i>203 组</i></a>
+        <a class="cat" href="/#featured"><b>Afro House</b><span>手鼓与马林巴骨架</span><i>97 组</i></a>
+        <a class="cat" href="/#featured"><b>Trance 长轨</b><span>138 BPM 长旋律走向</span><i>88 组</i></a>
+        <a class="cat" href="/#featured"><b>Hip-Hop 混编</b><span>92—104 BPM 律动</span><i>134 组</i></a>
+        <a class="cat" href="/#featured"><b>中文歌 Remix</b><span>华语女声四四拍重编</span><i>121 组</i></a>
+      </div>
+    </section>
+
+    <!-- 5 深度解析 -->
+    <section class="card-panel deep" id="deep">
+      <div class="panel-head">
+        <h2>加长版怎么分辨好坏：四个判断维度<small>IN-DEPTH</small></h2>
+      </div>
+
+      <h3>维度一：加长的是结构，还是重复</h3>
+      <p>很多标着 Extended Mix 的版本，实际做法是把副歌重复两遍、首尾各加 32 拍鼓组，时长上去了，信息量没变。真正有内容的加长版，会把时间花在<strong>结构铺陈</strong>上：前奏引入一条新的贝斯线、中段拆掉鼓组只留 pad、尾奏留一个可混入下一首的干净鼓点。判断方法很直接——把进度条拖到第 40 分钟和第 75 分钟，如果两处听感几乎一样，这组加长版的“长”就没有意义。</p>
+      <p>以 <strong>Sena</strong> 的 75 分钟旋律 Techno 为例，她在第 40 分钟做了一段几乎只留 pad 的空段，整条情绪线由冷转暖再回落，这类处理属于结构层面的加长。<strong>Kira Vale</strong> 的上海站则采用另一种思路：前 20 分钟只铺鼓与贝斯，把人声采样压到第 34 分钟才放出，靠延迟满足拉长张力。</p>
+
+      <h3>维度二：BPM 曲线是否被写清楚</h3>
+      <p>BPM 是长版混音最实用的筛选条件。一首 6 分钟的 Extended Mix 若标注 126 BPM，你大致能判断能否接在现有歌单后面；一组 70 分钟的 Set 若只写“Tech House”，实际可能在 122—130 之间来回摆。带 BPM 区间的条目，通常意味着作者做过整体规划。</p>
+      <ul>
+        <li><strong>稳定型</strong>：全程 ±2 BPM，如 Kira Vale 的 124—127，适合长时间铺场不打断。</li>
+        <li><strong>渐升型</strong>：从 152 一路加到 160，如 Murasaki 的柏林现场，适合作为整晚高潮。</li>
+        <li><strong>回落型</strong>：后段主动降速，通常用于收场过渡。</li>
+      </ul>
+
+      <h3>维度三：棚录与现场直录的差别</h3>
+      <p>这两类不能混着比。棚录版干净、接歌点精准、可反复听，但缺少现场张力；现场直录带观众声、返送噪声和偶发失误，却保留了真实推进感。Murasaki 的 88 分钟现场在中段换盘两次，留有明显停顿，这类“瑕疵”在棚录里会被剪掉，但在现场语境下反而是可听的信息。</p>
+      <div class="callout">实用建议：需要精确接歌时选棚录；需要在派对里制造气氛时选现场直录。两者混着比较时长和热度，容易得出错误结论。</div>
+
+      <h3>维度四：曲目表公开程度</h3>
+      <p>曲目表是长版混音最直接的信任凭证。公开到曲名与时间点的条目，你能快速定位“第 48 分钟那首是什么”，也方便回头按单曲去找 Extended Mix 版本。只给总时长、不给曲目表的作品，往往难以复用。</p>
+      <p>看曲目表时注意三件事：<strong>曲目数量与时长是否匹配</strong>（90 分钟 40 首属于正常，90 分钟 8 首说明是长轨风格）；<strong>是否有重复曲目</strong>（同一首歌以不同 Remix 出现两次，通常是在凑时长）；<strong>是否标注年代或地区</strong>（Hip-Hop 混编按年代排列，听感线索会清晰很多）。</p>
+    </section>
+
+    <!-- 6 收听路径 -->
+    <section class="card-panel" id="guide">
+      <div class="panel-head">
+        <h2>第一次听加长混音的顺序建议<small>LISTENING PATH</small></h2>
+      </div>
+      <div class="steps">
+        <div class="step"><div><b>先定场景，再定风格</b><p>暖场、主时段、收场三种场景对应的 BPM 与强度完全不同。先想清楚要在什么时段用，再回头挑风格，比先挑风格再找场景效率高得多。</p></div></div>
+        <div class="step"><div><b>从 50—70 分钟的 Set 开始</b><p>超过 80 分钟的现场对注意力和使用场景要求更高。第一次接触建议先听 NOVA-9 的 Deep House 串烧或 Lumi Adeyemi 的 Afro House 长版，结构清楚、起伏平缓。</p></div></div>
+        <div class="step"><div><b>用 BPM 区间做二次筛选</b><p>把目标 BPM 写下来，只保留区间跨度在 5 以内的条目。跨度越大，实际听感越难预判。</p></div></div>
+        <div class="step"><div><b>抽查三个时间点</b><p>开头 3 分钟、中段、结尾 3 分钟各听一小段。开头看引入是否干净，中段看有没有新元素，结尾看是否留了可混出的鼓点。</p></div></div>
+        <div class="step"><div><b>按单曲反查 Extended Mix</b><p>听到喜欢的一段，记下时间点去对曲目表，再找那首歌的 8 分钟 Extended Mix 单独收藏，比整组反复听更实用。</p></div></div>
+      </div>
+    </section>
+
+    <!-- 7 FAQ -->
+    <section class="card-panel" id="faq">
+      <div class="panel-head">
+        <h2>常见问题<small>FAQ</small></h2>
+      </div>
+
+      <details class="faq">
+        <summary>Extended Mix 和 Club Set 有什么区别？</summary>
+        <div class="ans">Extended Mix 通常指单曲的加长版本，6—9 分钟，围绕一首歌做结构扩展；Club Set 是一整段 45—90 分钟的连续混音，包含多首曲目。前者方便单曲收藏与接歌，后者看的是整体选曲与 BPM 曲线。</div>
+      </details>
+
+      <details class="faq">
+        <summary>女DJ加长混音一般多久更新一次？</summary>
+        <div class="ans">没有统一周期。棚录的加长串烧多为每月一到两组，现场直录取决于演出安排，通常演出后 3—10 天内上传。本页更新流按实际上线时间排列，11 月 25 日当天新增 9 组。</div>
+      </details>
+
+      <details class="faq">
+        <summary>第一次接触应该从哪一组开始听？</summary>
+        <div class="ans">建议从 NOVA-9 的深夜 Deep House 长版串烧开始，118 BPM、结构平缓、41 首曲目有完整曲目表。适应之后再听 Kira Vale 的 72 分钟 Tech House 现场，节奏更紧但同样稳定。</div>
+      </details>
+
+      <details class="faq">
+        <summary>Hard Techno 的 150 BPM 以上版本适合什么场合？</summary>
+        <div class="ans">适合作为整晚的高潮段，通常在凌晨一点之后使用。152—160 BPM 的持续推进对体力要求较高，单次播放建议控制在 40—60 分钟，前后各留一段降速过渡。</div>
+      </details>
+
+      <details class="faq">
+        <summary>中文歌 Remix 加长版和原曲差别在哪？</summary>
+        <div class="ans">主要差别在节奏框架与段落长度。原曲多为 3—4 分钟、结构紧凑；Remix 加长版会重编成四四拍，加入前奏鼓组与尾奏，单曲拉到 5—7 分钟，并调整副歌出现的位置以便接歌。</div>
+      </details>
+
+      <details class="faq">
+        <summary>怎么判断一组加长混音值不值得听满一小时？</summary>
+        <div class="ans">看三项：BPM 区间是否写明、是否标注棚录或现场、曲目表是否公开到曲名与时间点。三项齐全的条目，实际听感与描述差距通常较小；缺两项以上的，建议先抽查三个时间点再决定。</div>
+      </details>
+    </section>
+
+    <!-- 8 用户评论 -->
+    <section class="card-panel" id="comments">
+      <div class="panel-head">
+        <h2>听众评论<small>COMMENTS</small></h2>
+      </div>
+      <div class="comments">
+        <div class="cmt"><div class="who"><span class="avatar">夜</span><b>夜航船阿哲</b><span>11-25</span></div><p>Kira Vale 那组前 20 分钟只有鼓和贝斯，一开始还以为是没加载完，听到第 34 分钟人声进来才明白是故意压的。</p></div>
+        <div class="cmt"><div class="who"><span class="avatar">L</span><b>Luna_打碟五年</b><span>11-25</span></div><p>BPM 区间写清楚这点太重要了。之前下过一组只写 Tech House 的，结果中间跳到 132，接歌直接断了。</p></div>
+        <div class="cmt"><div class="who"><span class="avatar">低</span><b>低音炮老陈</b><span>11-24</span></div><p>Murasaki 那段换盘停顿我反而喜欢，现场就该有现场的样子。棚录版太干净，放出来有点像在放专辑。</p></div>
+        <div class="cmt"><div class="who"><span class="avatar">小</span><b>小满不满</b><span>11-24</span></div><p>安琳的中文 Remix 串烧暖场很好用，主歌辨识度保留得不错，客人能跟着哼。</p></div>
+        <div class="cmt"><div class="who"><span class="avatar">D</span><b>DJ_橙子汽水</b><span>11-23</span></div><p>NOVA-9 那组 41 首曲目表做得细，但中段 6 分钟无鼓那段我不太敢在酒吧用，气氛会掉。</p></div>
+        <div class="cmt"><div class="who"><span class="avatar">阿</span><b>阿May的耳机</b><span>11-23</span></div><p>Sena 的情绪线是真的完整，从冷到暖再回落，听完整组比切歌舒服很多。</p></div>
+        <div class="cmt"><div class="who"><span class="avatar">三</span><b>三点半收场</b><span>11-22</span></div><p>Lumi 的 Afro House 适合户外，室内放总觉得少点东西。手鼓采样在好音响上才出得来。</p></div>
+        <div class="cmt"><div class="who"><span class="avatar">V</span><b>VEX现场见过</b><span>11-22</span></div><p>大场 EDM 那组第 48 分钟开始连推三首，现场确实炸，但录音版听会觉得有点吵，各取所需吧。</p></div>
+        <div class="cmt"><div class="who"><span class="avatar">黑</span><b>黑胶不转</b><span>11-21</span></div><p>Hoshino 的长轨 Trance 单曲平均九分半，对习惯三分钟一首的人来说节奏偏慢，需要点耐心。</p></div>
+        <div class="cmt"><div class="who"><span class="avatar">J</span><b>Jay粉小林</b><span>11-21</span></div><p>Hip-Hop 混编按年代排这个思路好，顺着听能感觉到律动变化，比乱序串烧有信息量。</p></div>
+        <div class="cmt"><div class="who"><span class="avatar">周</span><b>周末主理人</b><span>11-20</span></div><p>希望能多来点 60 分钟左右的中等长度，90 分钟的现场虽然好，但活动时长经常不够用。</p></div>
+        <div class="cmt"><div class="who"><span class="avatar">耳</span><b>耳机里的猫</b><span>11-20</span></div><p>建议听之前先看曲目表，有一次听到喜欢的段落找不到是哪首，翻了半天。现在养成先存曲目表的习惯。</p></div>
+        <div class="cmt"><div class="who"><span class="avatar">K</span><b>Kiko不打烊</b><span>11-19</span></div><p>Hard Techno 150 以上连着放一小时真的累，Murasaki 那组我分两次听完的。</p></div>
+        <div class="cmt"><div class="who"><span class="avatar">巷</span><b>巷口小酒馆</b><span>11-19</span></div><p>Deep House 那组收场用很稳，最后十几分钟几乎没有人声，客人慢慢散场也不突兀。</p></div>
+        <div class="cmt"><div class="who"><span class="avatar">北</span><b>北方来的鼓手</b><span>11-18</span></div><p>作为鼓手听 Tech House 长版主要看节奏层次，Kira 那组中段加了拍手声，细节挺多。</p></div>
+        <div class="cmt"><div class="who"><span class="avatar">一</span><b>一只耳朵</b><span>11-18</span></div><p>整体质量不错，就是部分条目热度标得偏高，实际听下来和排名差距有点大。</p></div>
+      </div>
+    </section>
+
+    <!-- 9 相关资讯 -->
+    <section class="card-panel" id="news">
+      <div class="panel-head">
+        <h2>相关资讯<small>NEWS</small></h2>
+      </div>
+      <div class="news">
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/news-kira-shanghai/600/400" width="600" height="400" loading="lazy" alt="Kira Vale 上海站加长混音上线资讯配图">
+          <div class="n-body">
+            <h4>Kira Vale 上海站 72 分钟现场录音上线</h4>
+            <div class="date">2026-11-25</div>
+            <p>Tech House 长版新条目，曲目表公开 26 首。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/news-hardtechno-trend/600/400" width="600" height="400" loading="lazy" alt="Hard Techno 加长版数量增长资讯配图">
+          <div class="n-body">
+            <h4>Hard Techno 加长版条目两个月增 38 组</h4>
+            <div class="date">2026-11-23</div>
+            <p>150—160 BPM 区间的现场直录占比明显上升。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/news-chinese-remix/600/400" width="600" height="400" loading="lazy" alt="中文歌 Remix 加长串烧资讯配图">
+          <div class="n-body">
+            <h4>安琳中文女声 Remix 串烧更新至 Vol.7</h4>
+            <div class="date">2026-11-24</div>
+            <p>新增 126 BPM 版本，与 124 BPM 版并列收录。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/news-bpm-label/600/400" width="600" height="400" loading="lazy" alt="混音条目 BPM 标注规范讨论配图">
+          <div class="n-body">
+            <h4>社区讨论：加长混音是否该强制标注 BPM 区间</h4>
+            <div class="date">2026-11-22</div>
+            <p>多数主理人认为区间标注能减少选曲试错成本。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/news-melodic-techno/600/400" width="600" height="400" loading="lazy" alt="旋律 Techno 长版条目资讯配图">
+          <div class="n-body">
+            <h4>Sena 旋律 Techno 75 分钟长版上线</h4>
+            <div class="date">2026-11-21</div>
+            <p>第 40 分钟空段被标注为整晚情绪转折点。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/news-weekly-chart/600/400" width="600" height="400" loading="lazy" alt="本周加长混音榜单更新配图">
+          <div class="n-body">
+            <h4>本周加长榜更新：Tech House 包揽前三</h4>
+            <div class="date">2026-11-18</div>
+            <p>Hard Techno 升至第五，Deep House 稳定在第七。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 10 相关推荐 -->
+    <section class="card-panel" id="reco">
+      <div class="panel-head">
+        <h2>延伸方向与相关条目<small>RELATED</small></h2>
+      </div>
+      <div class="reco-tags">
+        <a href="/#deep" class="hot">Extended Mix 结构分析</a>
+        <a href="/#updates">现场直录与棚录对比</a>
+        <a href="/#featured">Afro House 手鼓采样</a>
+        <a href="/#featured">中文女声四四拍重编</a>
+        <a href="/#chart">年度加长混音 TOP20</a>
+        <a href="/#guide">BPM 接歌区间选择</a>
+        <a href="/#featured">Hip-Hop 年代串烧</a>
+        <a href="/#faq">长版与短版区别</a>
+      </div>
+    </section>
+
+    <!-- 11 补充板块：本周榜单 -->
+    <section class="card-panel" id="chart">
+      <div class="panel-head">
+        <h2>本周加长混音榜<small>CHART · 11-19 至 11-25</small></h2>
+      </div>
+      <ol class="chart">
+        <li><div><div class="c-name">Kira Vale · 上海站 72 分钟 Extended Set</div><div class="c-sub">Tech House · 124—127 BPM · 现场直录</div></div><span class="c-val">9.6</span></li>
+        <li><div><div class="c-name">Murasaki · 柏林地下室 88 分钟 Hard Techno</div><div class="c-sub">Hard Techno · 152—160 BPM · 现场直录</div></div><span class="c-val">9.4</span></li>
+        <li><div><div class="c-name">NOVA-9 · 深夜 Deep House 长版串烧</div><div class="c-sub">Deep House · 118 BPM · 棚录 41 首</div></div><span class="c-val">9.2</span></li>
+        <li><div><div class="c-name">安琳 · 中文女声 Remix 加长串烧 Vol.7</div><div class="c-sub">中文 Remix · 126 BPM · 28 首曲目</div></div><span class="c-val">9.1</span></li>
+        <li><div><div class="c-name">Lumi Adeyemi · Afro House 66 分钟长版</div><div class="c-sub">Afro House · 121 BPM · 手鼓采样</div></div><span class="c-val">8.9</span></li>
+        <li><div><div class="c-name">Sena · 旋律 Techno 75 分钟长版</div><div class="c-sub">Melodic Techno · 122 BPM · 情绪转折</div></div><span class="c-val">8.8</span></li>
+        <li><div><div class="c-name">VEX · 大场 EDM 80 分钟加长版 Set</div><div class="c-sub">EDM · 128 BPM · 峰值堆叠</div></div><span class="c-val">8.7</span></li>
+        <li><div><div class="c-name">Hoshino · 长轨 Trance 68 分钟加长版</div><div class="c-sub">Trance · 138 BPM · 长旋律走向</div></div><span class="c-val">8.5</span></li>
+        <li><div><div class="c-name">Jay Dee 小 · Hip-Hop 混编 54 分钟长版</div><div class="c-sub">Hip-Hop · 92—104 BPM · 年代排序</div></div><span class="c-val">8.4</span></li>
+        <li><div><div class="c-name">小野 Miko · Tech House 60 分钟暖场版</div><div class="c-sub">Tech House · 124 BPM · 棚录</div></div><span class="c-val">8.2</span></li>
+      </ol>
+    </section>
+
+  </main>
+
+  <!-- 右侧辅助栏 -->
+  <aside class="side" aria-label="辅助信息">
+    <div class="side-card">
+      <h2>加长混音快速查找</h2>
+      <div class="search-box">
+        <input type="search" id="siteSearch" placeholder="输入风格、DJ名或曲目" aria-label="查找加长混音条目">
+        <button type="button" id="searchBtn">查找</button>
+      </div>
+      <div class="search-result" id="searchResult" aria-live="polite">例：Tech House、Kira、Trance</div>
+    </div>
+
+    <div class="side-card">
+      <h2>今日更新流</h2>
+      <ul class="update-stream">
+        <li><b>Kira Vale 上海站 72 分钟</b><time>今天 10:20 · 新上线</time></li>
+        <li><b>NOVA-9 Deep House 串烧</b><time>今天 09:05 · 曲目补全</time></li>
+        <li><b>Murasaki 柏林 88 分钟</b><time>昨天 22:40 · 时间戳更新</time></li>
+        <li><b>安琳 Remix Vol.7</b><time>昨天 18:12 · 新增版本</time></li>
+        <li><b>VEX 大场 EDM 80 分钟</b><time>11-23 15:30 · 段落标注</time></li>
+      </ul>
+    </div>
+
+    <div class="side-card">
+      <h2>加长版收听提示</h2>
+      <ul class="mini">
+        <li><span class="idx">1</span><div><a href="/#guide">先看 BPM 区间跨度</a><small>跨度 ≤5 更易预判</small></div></li>
+        <li><span class="idx">2</span><div><a href="/#deep">确认棚录或现场</a><small>两种不能混着比</small></div></li>
+        <li><span class="idx">3</span><div><a href="/#faq">抽查三个时间点</a><small>开头、中段、结尾</small></div></li>
+        <li><span class="idx">4</span><div><a href="/#deep">翻曲目表找单曲</a><small>再搜 Extended Mix</small></div></li>
+      </ul>
+    </div>
+
+    <div class="side-card">
+      <h2>热门标签</h2>
+      <div class="tag-cloud">
+        <a href="/#featured">Tech House</a>
+        <a href="/#featured">Afro House</a>
+        <a href="/#featured">Hard Techno</a>
+        <a href="/#featured">Deep House</a>
+        <a href="/#featured">中文 Remix</a>
+        <a href="/#featured">Melodic Techno</a>
+        <a href="/#featured">Trance 长轨</a>
+        <a href="/#featured">Hip-Hop 混编</a>
+        <a href="/#deep">Extended Mix</a>
+        <a href="/#chart">本周榜单</a>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<!-- 页尾 -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/#top">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="#12081a" stroke-width="1.8"/>
+              <circle cx="12" cy="12" r="2.6" fill="#12081a"/>
+              <path d="M12 3.2v3.4M12 17.4v3.4M3.2 12h3.4M17.4 12h3.4" stroke="#12081a" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="brand-name">dj女ｅｘｔｅｎｄｅｄ</span>
+        </a>
+        <p>整理女DJ加长混音版本、夜店长版 Set 与主题串烧，按风格、BPM 与场景建立可检索的收听线索。</p>
+      </div>
+      <div class="foot-col">
+        <h3>内容频道</h3>
+        <ul>
+          <li><a href="/#featured">精选加长混音</a></li>
+          <li><a href="/#updates">最新上线</a></li>
+          <li><a href="/#categories">风格分类</a></li>
+          <li><a href="/#chart">本周榜单</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>收听参考</h3>
+        <ul>
+          <li><a href="/#deep">四个判断维度</a></li>
+          <li><a href="/#guide">第一次收听路径</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">听众评论</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>动态与延伸</h3>
+        <ul>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#reco">延伸方向</a></li>
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#top">返回顶部</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="disclaimer">页面内条目名称、时长、BPM、热度与评论为示例整理内容，用于说明加长混音的分类与判断方式；具体作品信息以各发布方公布为准。</div>
+      <div>© 2026 dj女ｅｘｔｅｎｄｅｄ · 内容整理与页面设计</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var menuBtn = document.getElementById('menuBtn');
+  var nav = document.getElementById('nav');
+  if(menuBtn && nav){
+    menuBtn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && nav.classList.contains('open')){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+        menuBtn.focus();
+      }
+    });
+  }
+
+  var input = document.getElementById('siteSearch');
+  var btn = document.getElementById('searchBtn');
+  var out = document.getElementById('searchResult');
+  if(!input || !btn || !out) return;
+
+  var index = [
+    {t:'Kira Vale 上海站 72 分钟 Extended Set', k:'tech house kira vale 上海 72 124 127 现场直录', h:'/#featured'},
+    {t:'NOVA-9 深夜 Deep House 长版串烧', k:'deep house nova 9 118 41 首 收场', h:'/#featured'},
+    {t:'Murasaki 柏林地下室 88 分钟 Hard Techno', k:'hard techno murasaki 柏林 88 152 160 现场', h:'/#featured'},
+    {t:'Lumi Adeyemi Afro House 66 分钟长版', k:'afro house lumi adeyemi 121 手鼓 户外', h:'/#featured'},
+    {t:'安琳 中文女声 Remix 加长串烧 Vol.7', k:'中文 remix 安琳 126 28 首 暖场', h:'/#featured'},
+    {t:'VEX 大场 EDM 80 分钟加长版 Set', k:'edm vex 128 峰值 大场', h:'/#featured'},
+    {t:'Hoshino 长轨 Trance 68 分钟加长版', k:'trance hoshino 138 长旋律 长轨', h:'/#featured'},
+    {t:'Jay Dee 小 Hip-Hop 混编 54 分钟长版', k:'hip hop jay dee 92 104 年代 混编', h:'/#featured'},
+    {t:'Sena 旋律 Techno 75 分钟长版', k:'melodic techno sena 122 情绪 转折', h:'/#featured'},
+    {t:'加长版四个判断维度', k:'判断 维度 extended mix 结构 bpm 曲目表', h:'/#deep'},
+    {t:'第一次收听路径建议', k:'收听 路径 场景 bpm 抽查 单曲', h:'/#guide'},
+    {t:'Extended Mix 与 Club Set 区别', k:'faq extended mix club set 区别 单曲', h:'/#faq'},
+    {t:'本周加长混音榜', k:'榜单 排行 本周 top 热度', h:'/#chart'}
+  ];
+
+  function render(q){
+    var key = q.trim().toLowerCase();
+    if(!key){
+      out.innerHTML = '例：Tech House、Kira、Trance';
+      return;
+    }
+    var hits = index.filter(function(item){
+      return item.t.toLowerCase().indexOf(key) > -1 || item.k.indexOf(key) > -1;
+    }).slice(0,4);
+    if(!hits.length){
+      out.innerHTML = '没有找到与“<b>' + q.replace(/[<>&]/g,'') + '</b>”匹配的条目，试试 Tech House、Deep House、Trance 或 DJ 名。';
+      return;
+    }
+    out.innerHTML = '找到 <b>' + hits.length + '</b> 条：' + hits.map(function(h){
+      return '<a href="' + h.h + '">' + h.t + '</a>';
+    }).join(' · ');
+  }
+
+  btn.addEventListener('click', function(){ render(input.value); });
+  input.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); render(input.value); }
+  });
+  input.addEventListener('input', function(){ render(input.value); });
+})();
+</script>
+</body>
+  </html>
